@@ -1,7 +1,7 @@
 provider "aws" {
-  access_key = "${AKIAYR5PC2SIRAVFYPGI}"
-  secret_key = "${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}"
-  region = "${us-east-2}"
+  access_key = "AKIAYR5PC2SIRAVFYPGI"
+  secret_key = "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"
+  region     = "us-east-2"
 }
 
 # Security Group - allow SSH and TCP on port 9200 and 9300 (Elasticsearch API endpoint)
