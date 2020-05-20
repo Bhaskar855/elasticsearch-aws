@@ -10,7 +10,7 @@ wget --header "Cookie: oraclelicense=accept-securebackup-cookie" \
 
 yum localinstall -y jdk-8u151-linux-x64.rpm
 
-# Elasticsearch 5.6.3 Installation
+# Elasticsearch 7.5.1 Installation
 rpm -i https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.5.1-x86_64.rpm
 
 echo ES_JAVA_OPTS="\"-Xms1g -Xmx1g\"" >> /etc/sysconfig/elasticsearch
