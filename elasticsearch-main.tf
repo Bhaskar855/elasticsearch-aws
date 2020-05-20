@@ -38,8 +38,8 @@ resource "aws_security_group" "elasticsearch_cluster_sg" {
   }
 }
 
-resource "aws_iam_role" "elasticsearch1" {
-  name = "module.user_label.id"
+resource "aws_iam_role" "elasticsearch_iam_role" {
+  name = "elasticsearch_iam_role"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -71,8 +71,8 @@ data "aws_iam_policy_document" "elasticsearch_iam_policy_document" {
   }
 }
 
-resource "aws_iam_policy" "elasticsearch1" {
-  name   = "module.user_label.id"
+resource "aws_iam_policy" "elasticsearch_iam_policy" {
+  name   = "elasticsearch_iam_policy"
   policy = "${data.aws_iam_policy_document.elasticsearch_iam_policy_document.json}"
 }
 
