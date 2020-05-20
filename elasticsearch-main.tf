@@ -71,8 +71,8 @@ data "aws_iam_policy_document" "elasticsearch_iam_policy_document" {
   }
 }
 
-resource "aws_iam_policy" "elasticsearch_iam_policy" {
-  name   = "elasticsearch_iam_policy"
+resource "aws_iam_policy" "elasticsearch1" {
+  name   = "module.user_label.id"
   policy = "${data.aws_iam_policy_document.elasticsearch_iam_policy_document.json}"
 }
 
