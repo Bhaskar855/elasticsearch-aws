@@ -12,5 +12,5 @@ variable "aws_ami" {
 }
 
 variable "aws_instance_type" {
-  default     = "m3.medium"
+  default     = "t2.medium"
 }
