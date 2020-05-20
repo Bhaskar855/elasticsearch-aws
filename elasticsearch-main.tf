@@ -38,8 +38,8 @@ resource "aws_security_group" "elasticsearch_cluster_sg" {
   }
 }
 
-resource "aws_iam_role" "elasticsearch_iam_role" {
-  name = "elasticsearch_iam_role"
+resource "aws_iam_role" "elasticsearch1" {
+  name = "module.user_label.id"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
