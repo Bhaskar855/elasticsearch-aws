@@ -1,7 +1,7 @@
 resource "aws_instance" "elasticsearch_instance" {
-  ami           = "${var.aws_ami}"
-  instance_type = "${var.aws_instance_type}"
-  security_groups = ["${aws_security_group.elasticsearch_cluster_sg.name}"]
+  ami           = "ami-07c1207a9d40bc3bd)"
+  instance_type = "t2.micro"
+  security_groups = ["launch-wizard-16"]
   iam_instance_profile = "${aws_iam_instance_profile.elasticsearch_profile.name}"
   user_data = "${file("elasticsearch-node-setup.sh")}"
   count = "2"
