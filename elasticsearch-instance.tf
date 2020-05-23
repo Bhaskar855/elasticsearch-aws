@@ -5,8 +5,7 @@ resource "aws_instance" "elasticsearch_instance" {
   iam_instance_profile = "${aws_iam_instance_profile.elasticsearch_profile.name}"
   user_data = "${file("elasticsearch-node-setup.sh")}"
   count = "2"
-
-  tags {
+  tags = {
     Name = "aws_instance"
   }
 }
