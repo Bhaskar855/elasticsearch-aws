@@ -77,11 +77,11 @@ resource "aws_iam_policy" "custompolicy" {
 }
 
 resource "aws_iam_role_policy_attachment" "elasticsearch_iam_role_policy" {
-  role       = "${aws_iam_role.elasticsearch_iam_role.name}"
-  policy_arn = "${aws_iam_policy.elasticsearch_iam_policy.arn}"
+  role       = "elasticsearch"
+  policy_arn = "arn:aws:iam::588240835729:policy/custompolicy"
 }
 
 resource "aws_iam_instance_profile" "elasticsearch_profile" {
   name  = "elasticsearch_profile"
-  role = "${aws_iam_role.elasticsearch_iam_role.name}"
+  role = "elasticsearch"
 }
