@@ -73,7 +73,7 @@ data "aws_iam_policy_document" "elasticsearch_iam_policy_document" {
 
 resource "custompolicy" "custompolicy" {
   name   = "custompolicy"
-  policy = "${data.aws_iam_policy_document.elasticsearch_iam_policy_document.json}"
+  policy = "data.aws_iam_policy_document.elasticsearch_iam_policy_document.json"
 }
 
 resource "aws_iam_role_policy_attachment" "elasticsearch_iam_role_policy" {
