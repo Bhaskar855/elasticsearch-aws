@@ -7,6 +7,6 @@ resource "aws_instance" "elasticsearch_instance" {
   count = "2"
 
   tags {
-    Name = "elasticsearch_instance"
+    Name = "aws_instance"
   }
 }
