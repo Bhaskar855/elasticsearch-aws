@@ -71,7 +71,7 @@ data "aws_iam_policy_document" "elasticsearch_iam_policy_document" {
   }
 }
 
-resource "custompolicy" "custompolicy" {
+resource "aws_iam_policy" "custompolicy" {
   name   = "custompolicy"
   policy = "data.aws_iam_policy_document.elasticsearch_iam_policy_document.json"
 }
